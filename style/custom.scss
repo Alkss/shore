@@ -1,0 +1,620 @@
+$blue-color: #5cdbf9;
+$blue-background: rgb(217, 245, 255);
+$box-shadow: 0px 0px 5px rgba(1, 1, 1, 0.12);
+
+
+//ZahrahforDouglas-MediumIt
+@font-face {
+  font-family: "ZahrahforDouglas-MediumIt";
+  src: url("../assets/fonts/ZahrahforDouglas/ZahrahforDouglas-MediumIt.ttf");
+}
+
+//ZahrahforDouglas-Regular
+@font-face {
+  font-family: "ZahrahforDouglas-Regular";
+  src: url("../assets/fonts/ZahrahforDouglas/ZahrahforDouglas-Regular.ttf");
+}
+
+//ZahrahforDouglas-SemiboldIt
+@font-face {
+  font-family: "ZahrahforDouglas-SemiboldIt";
+  src: url("../assets/fonts/ZahrahforDouglas/ZahrahforDouglas-SemiboldIt.ttf");
+}
+
+//AvenirNext-Bold
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../assets/fonts/AvenirNext/AvenirNext-Bold.ttf");
+}
+
+//AvenirNext-Regular
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("../assets/fonts/AvenirNext/AvenirNext-Regular.ttf");
+}
+
+//AvenirNext-UltraLight
+@font-face {
+  font-family: "AvenirNext-UltraLight";
+  src: url("../assets/fonts/AvenirNext/AvenirNext-UltraLight.ttf");
+}
+
+p {
+  font-family: "AvenirNext-Regular";
+  color: gray;
+  margin-bottom: 10%;
+  font-size: 1em;
+}
+
+#section-1 {
+  margin-left: 15%;
+  height: 100%;
+  padding: 20px;
+
+  .image img {
+
+    @media (max-width: 768px) {
+      width: 70%;
+    }
+    width: 15%;
+  }
+
+  span {
+    @media (max-width: 768px) {
+      float: none;
+    }
+
+    float: right;
+  }
+}
+
+//mobile configuration for section 2
+#section-2 {
+  div {
+    &.hero-body {
+      @media (max-width: 768px) {
+        height: 800px;
+      }
+    }
+  }
+}
+
+//section 2 positioning
+.section-2 {
+  margin-left: 15%;
+  max-width: 25%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+//h1 on section 2 configuration
+h1 {
+  &.my-title {
+    font-family: 'ZahrahforDouglas-Regular';
+    font-weight: 100;
+    font-size: 2.5em;
+    color: white;
+
+    &::after {
+      content: '-';
+      background: $blue-color;
+      color: $blue-color;
+      display: flex;
+      width: 15%;
+      font-size: 6px;
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
+  }
+}
+
+//h2 on section 2 configuration
+h2 {
+  &.my-subtitle {
+    font-family: 'AvenirNext-Regular';
+    font-size: 0.8em;
+    color: white;
+  }
+}
+
+//p on section 2 configuration
+p {
+  &.my-arrow {
+    font-family: 'AvenirNext-Regular';
+    font-size: 0.8em;
+    color: white;
+    margin: 2px;
+
+    &::before {
+      content: '';
+      background-image: url("../assets/icons/arrow_green.svg");
+      height: 1em;
+      width: 4em;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+  }
+}
+
+//Button on section 2 configuration
+a {
+  &.myButton {
+    margin-top: 5%;
+    font-family: "AvenirNext-Regular";
+    border-radius: 2px;
+    max-width: 60%;
+    min-width: 60%;
+    @media (min-width: 769px) and (max-width: 1023px) {
+      min-width: 80%;
+    }
+
+  }
+}
+
+//image on section 2 configuration
+.section2-image {
+  @media (max-width: 768px) {
+    background-image: url("../assets/hero_mobile.jpg");
+  }
+  @media (min-width: 769px) and (max-width: 1023px) {
+    background-image: url("../assets/hero_tablet.jpg");
+  }
+  @media (min-width: 1024px) {
+    background-image: url("../assets/hero_desktop.jpg");
+    height: 580px;
+  }
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.card-reference {
+  position: relative;
+}
+
+.floating-card {
+  background: $blue-background;
+
+  @media (max-width: 768px) {
+    height: 100% !important;
+  }
+
+  @media (min-width: 1037px) {
+    min-width: 70%;
+    position: absolute;
+    z-index: 2;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: $box-shadow;
+    transform: translate(0, -26%);
+  }
+
+  h2 {
+    &.subtitle {
+      font-family: "AvenirNext-DemiBold";
+      color: #a7a7a7;
+      font-size: 0.9em;
+    }
+
+    &#no-extra-cost {
+      &::before {
+        content: '';
+        background-image: url("../assets/icons/no_extra_cost_style.svg");
+        height: 4em;
+        width: 4em;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    &#customer-management {
+      &::before {
+        content: '';
+        background-image: url("../assets/icons/customer_management_style.svg");
+        height: 4em;
+        width: 4em;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    &#points {
+      &::before {
+        content: '';
+        background-image: url("../assets/icons/points_style.svg");
+        height: 4em;
+        width: 4em;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    &#web-presentation {
+      &::before {
+        content: '';
+        background-image: url("../assets/icons/web_presentation_style.svg");
+        height: 4em;
+        width: 4em;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+
+    &#newsletter {
+      &::before {
+        content: '';
+        background-image: url("../assets/icons/newsletter_style.svg");
+        height: 4em;
+        width: 4em;
+        background-repeat: no-repeat;
+        display: block;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .my-title2 {
+    font-family: "AvenirNext-Regular";
+    font-size: 1.3em;
+
+    &::after {
+      content: '-';
+      background: $blue-color;
+      color: $blue-color;
+      display: flex;
+      width: 15%;
+      font-size: 6px;
+      margin-top: 5%;
+      margin-bottom: 10%;
+    }
+  }
+}
+
+#section-3 {
+  background-color: #f6f6f6;
+
+  .section3-image {
+    @media (max-width: 768px) {
+      background-image: url("../assets/map_mobile.jpg");
+      height: 100%;
+    }
+    @media (min-width: 769px) {
+      background-image: url("../assets/map.jpg");
+      height: 680px;
+      @media (max-width: 1035px) {
+        margin-top: initial;
+      }
+      @media (min-width: 1036px) {
+        margin-top: 170px;
+      }
+    }
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  .is-white {
+    margin-top: 10%;
+    max-width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 3% 2% 4% 2%;
+    border-bottom: 5px solid $blue-color;
+
+    @media (max-width: 768px) {
+      margin-left: unset;
+      margin-right: unset;
+      max-width: initial;
+    }
+
+    h1 {
+      font-family: "ZahrahforDouglas-Regular";
+      font-size: 1.3em;
+      color: gray;
+      font-weight: 500;
+    }
+
+    button {
+      &.button {
+        border: 0;
+        box-shadow: none;
+
+        &:hover {
+          background-color: #e8e8e8;
+        }
+      }
+    }
+
+    @media (min-width: 1023px) {
+      .columns {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+input {
+  &.input {
+    border: 0;
+    box-shadow: none;
+
+    &:focus {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+#section-4 {
+  @media (min-width: 1023px) {
+    position: relative;
+  }
+
+  #hero-body-4 {
+    @media (max-width: 768px) {
+      height: 100%;
+    }
+    @media (min-width: 1023px) {
+      position: absolute;
+      max-width: 25%;
+      min-height: 280px;
+      padding-right: 5%;
+      z-index: 1;
+      float: left;
+      margin-left: 15%;
+      transform: translate(0%, -40%);
+    }
+    background-color: $blue-background;
+    box-shadow: $box-shadow;
+
+
+    h1 {
+      font-family: "AvenirNext-Regular";
+      font-size: 1.3em;
+
+      &::after {
+        content: '-';
+        background: $blue-color;
+        color: $blue-color;
+        display: flex;
+        width: 15%;
+        font-size: 6px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+      }
+    }
+
+    h3 {
+      font-family: "AvenirNext-Regular";
+      font-size: 0.8em;
+    }
+  }
+}
+
+#section-5 {
+  @media (min-width: 1023px) {
+    position: relative;
+  }
+
+  #hero-body-5 {
+    @media (min-width: 1023px) {
+      position: absolute;
+      max-width: 52%;
+      max-height: 500px;
+      min-height: 350px;
+      z-index: 2;
+      background-color: white;
+      box-shadow: $box-shadow;
+      float: left;
+      margin-left: 15%;
+      transform: translate(41%, -15%);
+      padding: 1px 2px 1px 2px;
+    }
+
+    @media(max-width: 768px) {
+      .image img {
+        box-shadow: 0 47px 50px rgba(1, 1, 1, 0.46);
+        margin: 0 auto;
+        width: 80%;
+      }
+    }
+
+    #form-column {
+      @media (min-width: 1023px) {
+        padding: 30px 0 10px 30px;
+      }
+
+
+      .border-bottom {
+        padding: 3px 0 2px 0;
+        border-bottom: 1px solid black;
+
+        &:nth-child(3) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    input[type=button] {
+      margin-top: 5%;
+
+    }
+
+    span {
+      color: gray;
+      @media (min-width: 1023px) {
+        font-size: .65em;
+      }
+      line-height: 0;
+    }
+  }
+
+}
+
+#section-6 {
+  @media (min-width: 1023px) {
+    margin-top: 25%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #section-6-header {
+    @media (min-width: 1023px) {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    margin-bottom: 5%;
+  }
+
+  h1 {
+    font-family: "AvenirNext-Bold";
+    font-size: 1.3em;
+  }
+
+  h2 {
+    font-family: "AvenirNext-Regular";
+    font-size: 1.2em;
+  }
+
+  p {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &#online-booking::before {
+      content: '';
+      background-image: url("../assets/icons/online_booking_style.svg");
+      height: 4em;
+      width: 4em;
+      background-repeat: no-repeat;
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+
+    &#domain::before {
+      content: '';
+      background-image: url("../assets/icons/domain_style.svg");
+      height: 4em;
+      width: 4em;
+      background-repeat: no-repeat;
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+
+    &#responsive::before {
+      content: '';
+      background-image: url("../assets/icons/responsive_style.svg");
+      height: 4em;
+      width: 4em;
+      background-repeat: no-repeat;
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+
+    &#notification::before {
+      content: '';
+      background-image: url("../assets/icons/notification_style.svg");
+      height: 4em;
+      width: 4em;
+      background-repeat: no-repeat;
+      display: block;
+      float: left;
+      margin-right: 10px;
+    }
+
+
+  }
+}
+
+
+footer {
+  &.footer {
+    background-color: $blue-background;
+    max-height: 100%;
+    padding: 20px;
+
+    .image img {
+      width: 35%;
+      float: right;
+    }
+
+    a {
+      color: black;
+      font-family: "AvenirNext-Regular";
+      font-size: 1em;
+      @media (max-width: 768px) {
+        font-size: 0.75em;
+      }
+    }
+  }
+}
+
+.modal-title {
+  @media (max-width: 768px) {
+    font-size: 1em;
+  }
+  font-family: "ZahrahforDouglas-MediumIt";
+}
+
+.modal-subtitle {
+  font-size: 1em;
+  font-family: "AvenirNext-Regular";
+}
+
+div {
+  &#success-modal, &#error-modal {
+    .modal-content {
+      @media (max-width: 768px) {
+        min-width: initial;
+        width: 80%;
+        height: 100%;
+      }
+      max-width: 645px;
+      min-width: 576px;
+      width: 70%;
+      overflow: hidden;
+      background-color: white;
+
+      div {
+        div:nth-child(1) {
+          @media (max-width: 768px) {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        div:nth-child(2) {
+          padding: 25px 15px 0 10px;
+        }
+      }
+    }
+
+    a {
+      font-family: "AvenirNext-Regular";
+      color: black;
+    }
+
+  }
+}
