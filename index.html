@@ -2,6 +2,8 @@
 <html id="html" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mauris eu elit cursus molestie. Donec id posuere elit. Nunc tempus hendrerit erat, ac aliquet tortor interdum non. Praesent a porta lorem. Pellentesque commodo quam ac consequat vehicula. Pellentesque laoreet, neque scelerisque eleifend sodales, nisi libero viverra diam, sed sagittis felis felis non libero. Phasellus ac venenatis nunc.">
     <link rel="stylesheet" href="resource/bulma.min.css">
     <link rel="stylesheet" href="style/custom.css">
     <script src="resource/fa-all.js"></script>
@@ -17,7 +19,7 @@
     <div class="columns">
         <div class="column">
             <figure class="image">
-                <img src="assets/logo_douglas_black.svg">
+                <img src="assets/logo_douglas_black.svg" alt="Brading name containing the word 'Douglas'">
             </figure>
         </div>
         <div class="column">
@@ -113,7 +115,8 @@
             </div>
             <div class="column">
                 <figure class="image">
-                    <img src="assets/shore_demo_sebastian_blank.png">
+                    <img src="assets/shore_demo_sebastian_blank.png"
+                         alt="Image of a man, wearing a white shirt smiling with a white background">
                 </figure>
             </div>
         </div>
@@ -132,11 +135,13 @@
                 <p id="domain">Cloudbasierte und mobile Terminverwaltung über den Shore Online-Kalender.</p>
                 <p id="responsive">Digitales und kinderleichtes Kundenmanagement auf allen End-geräten.</p>
                 <p id="notification">Automatische Terminerinnerungen an lhre Kunden per Email oder SMS.</p>
-                <a type="button" class="button is-black" href="//www.shore.com/en/pricing/" target="_blank">MEHR ÜBER SHORE ERFAHREN</a>
+                <a type="button" class="button is-black" href="//www.shore.com/en/pricing/" target="_blank">MEHR ÜBER
+                    SHORE ERFAHREN</a>
             </div>
             <div class="column is-7-desktop">
                 <figure class="image">
-                    <img src="assets/partnerships_douglas_graphics_01_de.png">
+                    <img src="assets/partnerships_douglas_graphics_01_de.png"
+                         alt="Image of a monitor with pricing. Inside the monitor are a serious of tasks to be done separated by day">
                 </figure>
             </div>
         </div>
@@ -155,7 +160,7 @@
         </div>
         <div class="column has-text-right">
             <figure class="image">
-                <img src="assets/logo_douglas_black.svg">
+                <img src="assets/logo_douglas_black.svg" alt="Brading name containing the word 'Douglas'">
             </figure>
         </div>
     </div>
@@ -163,57 +168,60 @@
 
 <!--START OF SUCCESS MODAL-->
 <div>
-    <div class="modal " id="success-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="columns">
-                <div class="column">
-                    <figure class="image">
-                        <img src="assets/loyalty_card_scanner_image_b.jpg">
-                    </figure>
+    <div class=" modal " id="success-modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="columns">
+                        <div class="column">
+                            <figure class="image">
+                                <img src="assets/loyalty_card_scanner_image_b.jpg" alt="Close up from an woman's face">
+                            </figure>
+                        </div>
+                        <div class="column has-text-centered-mobile">
+                            <h1 class="title modal-title">Glückwunsch!</h1>
+                            <h2 class="subtitle modal-subtitle">In ihrer Nachbarschaft gibt es ca. <span
+                                    id="returnedData"></span> Douglas Loyalty Card
+                                Nutzer</h2>
+                            <p>Treten Sie jetzt mit uns in Kontakt und schöpfen Sie dieses Kundepontenzial zusammen mit
+                                Douglas
+                                und Shore voll aus.</p>
+                            <input type="button" class="button is-black is-small modal-btn"
+                                   value="JETZT UNVERBINDLICH ANFRAGEN">
+                        </div>
+                    </div>
                 </div>
-                <div class="column has-text-centered-mobile">
-                    <h1 class="title modal-title">Glückwunsch!</h1>
-                    <h2 class="subtitle modal-subtitle">In ihrer Nachbarschaft gibt es ca. <span
-                            id="returnedData"></span> Douglas Loyalty Card
-                        Nutzer</h2>
-                    <p>Treten Sie jetzt mit uns in Kontakt und schöpfen Sie dieses Kundepontenzial zusammen mit
-                        Douglas
-                        und Shore voll aus.</p>
-                    <input type="button" class="button is-black is-small modal-btn" value="JETZT UNVERBINDLICH ANFRAGEN">
-                </div>
-            </div>
+                <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-</div>
-<!--END OF SUCCESS MODAL-->
+    <!--END OF SUCCESS MODAL-->
 
-<!--START OF ERROR MODAL-->
-<div>
-    <div class="modal" id="error-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="columns">
-                <div class="column">
-                    <figure class="image">
-                        <img src="assets/loyalty_card_scanner_image_a.jpg">
-                    </figure>
-                </div>
-                <div class="column has-text-centered-mobile">
-                    <h2 class="subtitle modal-subtitle">Melden Sie sich bei unverbindlich bei uns. Gemeinsam finden wir
-                        heraus wie auch Sie von Douglas-kunden in Ihrer Nähe profitieren können.</h2>
-                    <p>Treten Sie jetzt mit uns in Kontakt und schöpfen Sie dieses Kundepontenzial zusammen mit
-                        Douglas
-                        und Shore voll aus.</p>
-                    <input type="button" class="button is-black is-small modal-btn" value="JETZT UNVERBINDLICH ANFRAGEN">
-                    <br><a id="try-again-btn">Nochmal versuchen</a>
+    <!--START OF ERROR MODAL-->
+    <div>
+        <div class="modal" id="error-modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="columns">
+                    <div class="column">
+                        <figure class="image">
+                            <img src="assets/loyalty_card_scanner_image_a.jpg" alt="Close up from an woman's face">
+                        </figure>
+                    </div>
+                    <div class="column has-text-centered-mobile">
+                        <h2 class="subtitle modal-subtitle">Melden Sie sich bei unverbindlich bei uns. Gemeinsam finden
+                            wir
+                            heraus wie auch Sie von Douglas-kunden in Ihrer Nähe profitieren können.</h2>
+                        <p>Treten Sie jetzt mit uns in Kontakt und schöpfen Sie dieses Kundepontenzial zusammen mit
+                            Douglas
+                            und Shore voll aus.</p>
+                        <input type="button" class="button is-black is-small modal-btn"
+                               value="JETZT UNVERBINDLICH ANFRAGEN">
+                        <br><a id="try-again-btn">Nochmal versuchen</a>
+                    </div>
                 </div>
             </div>
+            <button class="modal-close is-large" aria-label="close"></button>
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
     </div>
-</div>
-<!--END OF ERROR MODAL-->
+    <!--END OF ERROR MODAL-->
 </body>
 </html>
